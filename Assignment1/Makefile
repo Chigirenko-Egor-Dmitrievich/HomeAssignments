@@ -1,3 +1,8 @@
+/*
+    Чигиренко Егор Дмитриевич st128240@student.spbu.ru
+    Assignment1
+*/
+
 all: hello
 
 hello: main.o hello.o
