@@ -1,4 +1,4 @@
-# Assignment2
+# Assignment2.b
 ## Author
 Чигиренко Егор Дмитриевич, группа: 24.Б84-мм
 ## Contacts
