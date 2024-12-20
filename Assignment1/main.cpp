@@ -4,22 +4,22 @@
 */
 
 #include <iostream>
-#include <string>
 #include "hello.hpp"
-using namespace std;
+
 int main()
 {
-    hello();
-    cout << endl;
+    std::cout << hello("World") << std::endl;
     
-    string name;
-    cout << "Write name or None to end program: ";
-    cin >> name;
+    std::string name;
+    std::cout << "Write name or None to end program: ";
+    std::cin >> name;
+
     while (name != "None")
     {
-        cout << "Hello, " << name << "!" << endl;
-        cout << "Write name or None to end program: ";
-        cin >> name;
+        std::cout << hello(name) << std::endl;
+        std::cout << "Write name or None to end program: ";
+        std::cin >> name;
     }
+
     return 0;
 }

@@ -3,12 +3,9 @@
     Assignment1
 */
 
-#include <iostream>
-#include <string>
 #include "hello.hpp"
-using namespace std;
-void hello()
+
+std::string hello(const std::string &name)
 {
-    string phrase = "Hello, World!";
-    cout << phrase;
+    return "Hello, " + name + "!";
 }

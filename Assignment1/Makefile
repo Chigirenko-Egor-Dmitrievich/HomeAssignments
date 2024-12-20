@@ -10,4 +10,7 @@ hello.o: hello.cpp
 	g++ -c hello.cpp
 
 clean:
+	rm -rf *.o
+
+cleanall:
 	rm -rf *.o hello

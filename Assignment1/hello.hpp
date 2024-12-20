@@ -3,7 +3,9 @@
     Assignment1
 */
 
+#include <string>
+
 //#ifndef hello.hpp
 //#define hello.hpp
-void hello();
+std::string hello(const std::string& name);
 //#endif

@@ -6,6 +6,10 @@ st128240@student.spbu.ru
 ## Description
 ...
 ## Build
-Make
+make
 ## Run
-...
+./array
+./create
+## Clean
+make clean
+make cleanall
