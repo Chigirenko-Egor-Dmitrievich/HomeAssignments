@@ -10,5 +10,5 @@ make
 ## Run
 ./calculate
 ## Clean
-make clean
+make clean  
 make cleanall

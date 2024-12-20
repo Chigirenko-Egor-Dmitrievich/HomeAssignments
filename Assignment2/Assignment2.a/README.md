@@ -4,12 +4,12 @@
 ## Contacts
 st128240@student.spbu.ru
 ## Description
-...
+Home Assignment 2.a - a program that reads a binary file "source.txt" into an array, then turns it over, and outputs it to a file "destination.txt".
 ## Build
 make
 ## Run
-./array
+./main  
 ./create
 ## Clean
-make clean
+make clean  
 make cleanall

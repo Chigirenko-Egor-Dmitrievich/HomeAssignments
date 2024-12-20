@@ -10,5 +10,5 @@ make
 ## Run
 ./hello
 ## Clean
-make clean
+make clean  
 make cleanall
