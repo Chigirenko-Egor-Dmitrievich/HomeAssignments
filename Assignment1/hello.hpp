@@ -5,7 +5,7 @@
 
 #include <string>
 
-//#ifndef hello.hpp
-//#define hello.hpp
+#ifndef HELLO_HPP
+#define HELLO_HPP
 std::string hello(const std::string& name);
-//#endif
+#endif
