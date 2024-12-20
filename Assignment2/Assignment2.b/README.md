@@ -4,7 +4,7 @@
 ## Contacts
 st128240@student.spbu.ru
 ## Description
-Home Assignment 2.b - reverse Polish entry calculator. Calculate inputed string according to the reverse Polish entry.
+Home Assignment 2.b - the reverse Polish entry calculator. Calculates inputed string according to the reverse Polish entry.
 ## Build
 make
 ## Run
