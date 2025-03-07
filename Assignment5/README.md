@@ -4,7 +4,7 @@
 ## Contacts
 st128240@student.spbu.ru
 ## Description
-Home assingment 5 - includes classes which "Home assingment 3" does, except "Predacon", but 3 virtual methods: transform, openFire, ult was added. Tests was created.
+Home assingment 5 - includes classes which "Home assingment 3" does, except "Predacon", but 3 virtual methods: transform, openFire, ult was added. File with tests is "tests.cpp".
 ## Build
 make
 ## Run

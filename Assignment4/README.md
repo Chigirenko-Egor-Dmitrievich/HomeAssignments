@@ -4,7 +4,7 @@
 ## Contacts
 st128240@student.spbu.ru
 ## Description
-Home Assignment 4 - includes same classes as "Home Assignment 3" does, but operators: "<<", ">>", "<", "==", ">" are realized. Makefile is reorganized; astyle is used.
+Home Assignment 4 - includes same classes as "Home Assignment 3" does, but operators: "<<", ">>", "<", "==", ">" are realized. Makefile is reorganized; astyle is used. File with tests is "tests.cpp".
 ## Build
 make
 ## Run

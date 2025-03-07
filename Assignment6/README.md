@@ -4,7 +4,7 @@
 ## Contacts
 st128240@student.spbu.ru
 ## Description
-Home Assignment 6 - the template class creation. Partically specialized template classes was created. Tests was created.
+Home Assignment 6 - the template class creation. Partically specialized template classes was created. File with tests is "tests.cpp".
 ## Build
 make
 ## Run
