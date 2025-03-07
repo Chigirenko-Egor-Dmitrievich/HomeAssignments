@@ -5,23 +5,25 @@
 
 #ifndef DECEPTICON_HPP
 #define DECEPTICON_HPP
-#include "transformer.hpp"
+#include "Transformer.hpp"
 #include <string>
 
-class Decepticon : public Transformer {
-private:
-    bool canFly;
-    std::string name;
-public:
-    Decepticon(const std::string& name, int lvl, int str, int fl, int am, Weapon* wpn, bool fly);
+class Decepticon: public Transformer
+{
+    private:
+        bool canFly;
+        std::string name;
+        
+    public:
+        Decepticon(const std::string& name, int lvl, int str, int fl, int am, Weapon* wpn, bool fly);
 
-    bool getCanFly() const;
-    void setCanFly(bool fly);
+        bool getCanFly() const;
+        void setCanFly(bool fly);
 
-    void sabotage();
-    void transform() override;
-    void openFire() override;
-    void ulta() override;
+        void sabotage();
+        void transform() override;
+        void openFire() override;
+        void ult() override;
 };
 
 #endif

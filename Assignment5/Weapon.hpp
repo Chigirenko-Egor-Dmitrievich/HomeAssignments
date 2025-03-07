@@ -6,12 +6,14 @@
 #ifndef WEAPON_HPP
 #define WEAPON_HPP
 
-class Weapon {
-private:
-    	int damage; 
-public:
+class Weapon
+{
+    private:
+        int damage; 
+    public:
      	Weapon(int dmg);
-     	
+
      	int getDamage() const;
 };
+
 #endif

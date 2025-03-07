@@ -1,10 +1,10 @@
 all: runTests
 
-runTests: test.o transformer.o weapon.o autobot.o decepticon.o predatorcon.o 
-	g++ test.cpp transformer.cpp weapon.cpp autobot.cpp decepticon.cpp predatorcon.cpp -lgtest -lpthread -o runTests
+runTests: tests.o transformer.o weapon.o autobot.o decepticon.o predacon.o 
+	g++ tests.cpp transformer.cpp weapon.cpp autobot.cpp decepticon.cpp predacon.cpp -lgtest -lpthread -o runTests
 
-test.o: test.cpp
-	g++ -c test.cpp
+tests.o: tests.cpp
+	g++ -c tests.cpp
 	
 transformer.o: transformer.cpp
 	g++ -c transformer.cpp
@@ -18,8 +18,8 @@ Autobot.o: autobot.cpp
 Decepticon.o: decepticon.cpp
 	g++ -c decepticon.cpp
 	
-Predatorcon.o : predatorcon.cpp
-	g++ -c predatorcon.cpp
+Predacon.o : predacon.cpp
+	g++ -c predacon.cpp
 
 clean:
 	rm -rf *.o

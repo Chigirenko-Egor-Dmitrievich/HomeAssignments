@@ -1,7 +1,7 @@
 CXX = g++
 CXXFLAGS = -g -Wall -Werror -Wpedantic 
-TARGET = run
-SOURCES = Autobot.cpp Decepticon.cpp Weapon.cpp transformer.cpp  test.cpp
+TARGET = runTests
+SOURCES = Autobot.cpp Decepticon.cpp Weapon.cpp Transformer.cpp Tests.cpp
 OBJECTS = $(SOURCES:.cpp=.o)
 
 $(TARGET): $(OBJECTS)

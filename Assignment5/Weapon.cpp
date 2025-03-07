@@ -5,8 +5,9 @@
 
 #include "Weapon.hpp"
 
-Weapon::Weapon(int dmg) : damage(dmg){}
+Weapon::Weapon(int dmg): damage(dmg) {}
 
-int Weapon::getDamage() const {
+int Weapon::getDamage() const
+{
     return damage;
 }

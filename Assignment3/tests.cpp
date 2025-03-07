@@ -7,7 +7,7 @@
 #include "transformer.hpp"
 #include "autobot.hpp"
 #include "decepticon.hpp"
-#include "predatorcon.hpp"
+#include "predacon.hpp"
 #include "weapon.hpp"
 
 TEST(weaponTest, initialization)
@@ -67,22 +67,22 @@ TEST(decepticonTest, initializationAndSabotage) {
    decepticon.transform();
 }
 
-TEST(predatorconTest, initializationAndHunt)
+TEST(predaconTest, initializationAndHunt)
 {
    Weapon weapon(60);
-   predatorcon predatorcon(7, 130, 500, 70, &weapon, 100);
+   predacon predacon(7, 130, 500, 70, &weapon, 100);
    
-   EXPECT_EQ(predatorcon.getLevel(), 7);
-   EXPECT_EQ(predatorcon.getStrength(), 130);
-   EXPECT_EQ(predatorcon.getFuel(), 500);
-   EXPECT_EQ(predatorcon.getAmmo(), 70);
-   EXPECT_EQ(predatorcon.getEnergy(), 100);
+   EXPECT_EQ(predacon.getLevel(), 7);
+   EXPECT_EQ(predacon.getStrength(), 130);
+   EXPECT_EQ(predacon.getFuel(), 500);
+   EXPECT_EQ(predacon.getAmmo(), 70);
+   EXPECT_EQ(predacon.getEnergy(), 100);
    
-   predatorcon.setEnergy(150);
-   EXPECT_EQ(predatorcon.getEnergy(), 150);
+   predacon.setEnergy(150);
+   EXPECT_EQ(predacon.getEnergy(), 150);
    
-   predatorcon.hunt();
-   predatorcon.transform();
+   predacon.hunt();
+   predacon.transform();
 }
 
 int main(int argc, char **argv)

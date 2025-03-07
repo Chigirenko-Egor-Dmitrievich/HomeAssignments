@@ -16,8 +16,8 @@ class autobot: public transformer
     public:
         autobot(int lvl, int str, int fl, int am, Weapon* wpn, int repair);
 	
-    void repair();
-    void transform() override;
+        void repair();
+        void transform() override;
 };
 
 #endif

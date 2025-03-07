@@ -16,11 +16,11 @@ class decepticon : public transformer
     public:
         decepticon(int lvl, int str, int fl, int am, Weapon* wpn, bool fly);
 
-    bool getCanFly() const;
-    void setCanFly(bool fly);
+        bool getCanFly() const;
+        void setCanFly(bool fly);
       
-    void sabotage();
-    void transform() override;
+        void sabotage();
+        void transform() override;
 };
 
 #endif

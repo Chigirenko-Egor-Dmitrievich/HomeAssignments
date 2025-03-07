@@ -5,20 +5,22 @@
 
 #ifndef AUTOBOT_HPP
 #define AUTOBOT_HPP
-#include "transformer.hpp"
+#include "Transformer.hpp"
 #include <string>
 
-class Autobot: public Transformer {
-private:
-    int repairPower;
-    std::string name;
-public:
-    Autobot(const std::string& name, int lvl, int str, int fl, int am, Weapon* wpn, int repair);
+class Autobot: public Transformer
+{
+    private:
+        int repairPower;
+        std::string name;
 
-    void repair();
-    void transform() override;
-    void openFire() override;
-    void ulta() override;
+    public:
+        Autobot(const std::string& name, int lvl, int str, int fl, int am, Weapon* wpn, int repair);
+
+        void repair();
+        void transform() override;
+        void openFire() override;
+        void ult() override;
 };
 
 #endif

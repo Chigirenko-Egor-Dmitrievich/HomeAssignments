@@ -1,16 +1,18 @@
 /*
     Чигиренко Егор Дмитриевич st128240@student.spbu.ru
-    Assignment3
+    Assignment5
 */
 
 #ifndef TRANSFORMER_HPP
 #define TRANSFORMER_HPP
-#include "weapon.hpp"
-#include "fuelTank.hpp"
+#include "Weapon.hpp"
+#include "FuelTank.hpp"
+#include <string> 
 
-class transformer
+class Transformer
 {
     protected:
+        std::string name;
         int level;
         int strength;
         int ammo;
@@ -18,19 +20,20 @@ class transformer
         FuelTank fuelTank;
 
     public:
-        transformer(int lvl, int str, int fl, int am, Weapon* wpn);
+        Transformer(const std::string& name ,int lvl,int str, int fl,int am,Weapon* wpn);
         
-        virtual ~transformer();
-
+        virtual ~Transformer();
+    
         int getLevel() const;
         int getStrength() const;
         int getFuel() const;
         int getAmmo() const;
-
         void move();
         void fire();
     
         virtual void transform();
+        virtual void openFire();
+        virtual void ult();
 };
 
 #endif

@@ -1,7 +1,7 @@
 CXX = g++
 CXXFLAGS = -g -Wall -Werror -Wpedantic 
-TARGET = run_test
-SOURCES = test.cpp
+TARGET = runTests
+SOURCES = tests.cpp
 OBJECTS = $(SOURCES:.cpp=.o)
 
 $(TARGET): $(OBJECTS)

@@ -13,6 +13,7 @@ class FuelTank
 
     public:
 	FuelTank(int amount): fuelAmount(amount){}
+	
 	void consume() 
 	{
 	    if (fuelAmount > 0)
@@ -20,6 +21,7 @@ class FuelTank
 	        fuelAmount--;
 	    }
 	}
+	
 	int getFuelAmount() const 
 	{
 	    return fuelAmount;

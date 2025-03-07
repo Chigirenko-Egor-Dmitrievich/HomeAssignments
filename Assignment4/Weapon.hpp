@@ -7,32 +7,44 @@
 #define WEAPON_HPP
 #include <iostream>
 
-class Weapon {
+class Weapon
+{
+    private:
+        int damage;
 
-private:
+    public:
+        Weapon(int dmg = 10) : damage(dmg) {}
 
-    int damage;
+        int getDamage() const
+        {
+            return damage;
+        }
 
-public:
+        void setDamage(int dmg)
+        {
+            damage = dmg;
+        }
 
-    Weapon(int dmg = 10) : damage(dmg) {}
+        friend std::ostream& operator<<(std::ostream& os, const Weapon& weapon)
+        {
+            os << "Weapon damage: " << weapon.damage;
+            return os;
+        }
 
-    int getDamage() const { return damage; }
-
-    void setDamage(int dmg) { damage = dmg; }
-
-    friend std::ostream& operator<<(std::ostream& os, const Weapon& weapon) {
-
-        os << "Weapon damage: " << weapon.damage;
-
-        return os;
-
-    }
-
-    	bool operator>(const Weapon& other) const { return damage > other.damage; }
-	bool operator<(const Weapon& other) const { return damage < other.damage; }
-	bool operator==(const Weapon& other) const { return damage == other.damage; }
-
+        bool operator>(const Weapon& other) const
+        {
+            return damage > other.damage;
+        }
+        
+        bool operator<(const Weapon& other) const
+        {
+            return damage < other.damage;
+        }
+        
+        bool operator==(const Weapon& other) const
+        {
+            return damage == other.damage;
+        }
 };
 
 #endif

@@ -14,7 +14,7 @@ class Weapon
     public:
      	Weapon(int dmg);
      	
-    int getDamage() const;
+        int getDamage() const;
 };
 
 #endif

@@ -4,7 +4,7 @@
 ## Contacts
 st128240@student.spbu.ru
 ## Description
-Home Assignment 3 - class "transformer" which includes inherited classes: "autobot", "decepticon", "predatorcon"; association "weapon"; composition "fuelTank". Constructors and destructors was used. File with tests is "test.cpp"
+Home Assignment 3 - class "transformer" which includes inherited classes: "autobot", "decepticon", "predacon"; association "weapon"; composition "fuelTank". Constructors and destructors was used. File with tests is "test.cpp"
 ## Build
 make
 ## Run

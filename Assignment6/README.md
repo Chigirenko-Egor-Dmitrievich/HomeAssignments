@@ -8,7 +8,7 @@ Home Assignment 6 - the template class creation. Partically specialized template
 ## Build
 make
 ## Run
-./run_test
+./runTests
 ## Clean
 make clean  
 make cleanall

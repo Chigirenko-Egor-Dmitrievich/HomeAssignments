@@ -9,7 +9,8 @@
 #include "Weapon.hpp"
 #include "Predacon.hpp"
 
-TEST(TransformerTest, CreationAndBasicMethods) {
+TEST(TransformerTest, CreationAndBasicMethods)
+{
     auto weapon = std::make_unique<Weapon>(20);
     Transformer transformer(5, 100, 30, 50, weapon.release());
 
@@ -25,7 +26,8 @@ TEST(TransformerTest, CreationAndBasicMethods) {
     EXPECT_EQ(transformer.getAmmo(), 29);
 }
 
-TEST(TransformerTest, MoveMethod) {
+TEST(TransformerTest, MoveMethod)
+{
     auto weapon = std::make_unique<Weapon>(20);
     Transformer transformer(5, 100, 30, 50, weapon.release());
 
@@ -36,7 +38,8 @@ TEST(TransformerTest, MoveMethod) {
     EXPECT_EQ(transformer.getFuel(), 48);
 }
 
-TEST(TransformerTest, FireMethod) {
+TEST(TransformerTest, FireMethod)
+{
     auto weapon = std::make_unique<Weapon>(20);
     Transformer transformer(5, 100, 30, 50, weapon.release());
 
@@ -47,7 +50,8 @@ TEST(TransformerTest, FireMethod) {
     EXPECT_EQ(transformer.getAmmo(), 28);
 }
 
-TEST(TransformerTest, OperatorOverloads) {
+TEST(TransformerTest, OperatorOverloads)
+{
     auto weapon1 = std::make_unique<Weapon>(20);
     auto weapon2 = std::make_unique<Weapon>(15);
 
@@ -59,7 +63,8 @@ TEST(TransformerTest, OperatorOverloads) {
     EXPECT_FALSE(t1 == t2);
 }
 
-TEST(AutobotTest, RepairMethod) {
+TEST(AutobotTest, RepairMethod)
+{
     auto weapon = std::make_unique<Weapon>(20);
     Autobot autobot(5, 100, 30, 50, weapon.release(), 25);
 
@@ -71,7 +76,8 @@ TEST(AutobotTest, RepairMethod) {
     EXPECT_EQ(output.str(), "Repairing with power: 25\n");
 }
 
-TEST(AutobotTest, TransformMethod) {
+TEST(AutobotTest, TransformMethod)
+{
     auto weapon = std::make_unique<Weapon>(20);
     Autobot autobot(5, 100, 30, 50, weapon.release(), 25);
 
@@ -83,7 +89,8 @@ TEST(AutobotTest, TransformMethod) {
     EXPECT_EQ(output.str(), "Autobot is transforming\n");
 }
 
-TEST(AutobotTest, OutputStream) {
+TEST(AutobotTest, OutputStream)
+{
     auto weapon = std::make_unique<Weapon>(20);
     Autobot autobot(5, 100, 30, 50, weapon.release(), 25);
 
@@ -92,14 +99,16 @@ TEST(AutobotTest, OutputStream) {
     EXPECT_NE(output.str().find("Repair Power: 25"), std::string::npos);
 }
 
-TEST(DecepticonTest, GetCanFlyMethod) {
+TEST(DecepticonTest, GetCanFlyMethod)
+{
     auto weapon = std::make_unique<Weapon>(25);
     Decepticon decepticon(6, 120, 35, 60, weapon.release(), true);
 
     EXPECT_TRUE(decepticon.getCanFly());
 }
 
-TEST(DecepticonTest, SetCanFlyMethod) {
+TEST(DecepticonTest, SetCanFlyMethod)
+{
     auto weapon = std::make_unique<Weapon>(25);
     Decepticon decepticon(6, 120, 35, 60, weapon.release(), true);
 
@@ -107,7 +116,8 @@ TEST(DecepticonTest, SetCanFlyMethod) {
     EXPECT_FALSE(decepticon.getCanFly());
 }
 
-TEST(DecepticonTest, SabotageMethod) {
+TEST(DecepticonTest, SabotageMethod)
+{
     auto weapon = std::make_unique<Weapon>(25);
     Decepticon decepticon(6, 120, 35, 60, weapon.release(), true);
 
@@ -119,7 +129,8 @@ TEST(DecepticonTest, SabotageMethod) {
     EXPECT_EQ(output.str(), "Sabotaging Autobots\n");
 }
 
-TEST(DecepticonTest, TransformMethod) {
+TEST(DecepticonTest, TransformMethod)
+{
     auto weapon = std::make_unique<Weapon>(25);
     Decepticon decepticon(6, 120, 35, 60, weapon.release(), true);
 
@@ -131,7 +142,8 @@ TEST(DecepticonTest, TransformMethod) {
     EXPECT_EQ(output.str(), "Decepticon is transforming\n");
 }
 
-TEST(DecepticonTest, OutputStream) {
+TEST(DecepticonTest, OutputStream)
+{
     auto weapon = std::make_unique<Weapon>(25);
     Decepticon decepticon(6, 120, 35, 60, weapon.release(), true);
 
@@ -141,14 +153,16 @@ TEST(DecepticonTest, OutputStream) {
     EXPECT_NE(output.str().find("Can Fly: No"), std::string::npos);
 }
 
-TEST(PredaconTest, GetEnergyMethod) {
+TEST(PredaconTest, GetEnergyMethod)
+{
     auto weapon = std::make_unique<Weapon>(30);
     Predacon predacon(7, 130, 40, 70, weapon.release(), 100);
 
     EXPECT_EQ(predacon.getEnergy(), 100);
 }
 
-TEST(PredaconTest, SetEnergyMethod) {
+TEST(PredaconTest, SetEnergyMethod)
+{
     auto weapon = std::make_unique<Weapon>(30);
     Predacon predacon(7, 130, 40, 70, weapon.release(), 100);
 
@@ -156,7 +170,8 @@ TEST(PredaconTest, SetEnergyMethod) {
     EXPECT_EQ(predacon.getEnergy(), 150);
 }
 
-TEST(PredaconTest, HuntMethod) {
+TEST(PredaconTest, HuntMethod)
+{
     auto weapon = std::make_unique<Weapon>(30);
     Predacon predacon(7, 130, 40, 70, weapon.release(), 100);
 
@@ -168,7 +183,8 @@ TEST(PredaconTest, HuntMethod) {
     EXPECT_EQ(output.str(), "Predacon is hunting\n");
 }
 
-TEST(PredaconTest, TransformMethod) {
+TEST(PredaconTest, TransformMethod)
+{
     auto weapon = std::make_unique<Weapon>(30);
     Predacon predacon(7, 130, 40, 70, weapon.release(), 100);
 
@@ -180,7 +196,8 @@ TEST(PredaconTest, TransformMethod) {
     EXPECT_EQ(output.str(), "Predacon is transforming\n");
 }
 
-TEST(PredaconTest, OutputStream) {
+TEST(PredaconTest, OutputStream)
+{
     auto weapon = std::make_unique<Weapon>(30);
     Predacon predacon(7, 130, 40, 70, weapon.release(), 100);
 
@@ -190,7 +207,8 @@ TEST(PredaconTest, OutputStream) {
     EXPECT_NE(output.str().find("Energy: 150"), std::string::npos);
 }
 
-int main(int argc, char **argv) {
+int main(int argc, char **argv)
+{
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
 }
